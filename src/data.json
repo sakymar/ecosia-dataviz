@@ -1,0 +1,485 @@
+[
+  {
+    "date": "2019-09-01",
+    "income": 2039303,
+    "investInTreePlanting": 947388,
+    "treePlanted": 3473251,
+    "places": [
+      {
+        "name": "Nicaragua",
+        "invested": 28893
+      },
+      {
+        "name": "Burkina Faso",
+        "invested": 320069
+      },
+      {
+        "name": "Madagascar",
+        "invested": 80366
+      },
+      {
+        "name": "Ethiopia",
+        "invested": 80975
+      },
+      {
+        "name": "Indonesia",
+        "invested": 14770
+      },
+      {
+        "name": "Brazil",
+        "invested": 82315
+      }
+    ]
+  },
+  {
+    "date": "2019-08-01",
+    "income": 1755823,
+    "investInTreePlanting": 855323,
+    "treePlanted": 132064,
+    "places": [
+      {
+        "name": "Ghana",
+        "invested": 16849
+      },
+      {
+        "name": "Burkina Faso",
+        "invested": 28474
+      }
+    ]
+  },
+  {
+    "date": "2019-07-01",
+    "income": 1567995,
+    "investInTreePlanting": 815378,
+    "treePlanted": 408056,
+    "places": [
+      {
+        "name": "Indonesia",
+        "invested": 28893
+      },
+      {
+        "name": "Malawi",
+        "invested": 320069
+      },
+      {
+        "name": "Madagascar",
+        "invested": 80366
+      },
+      {
+        "name": "Ethiopia",
+        "invested": 80975
+      },
+      {
+        "name": "Indonesia",
+        "invested": 14770
+      },
+      {
+        "name": "Brazil",
+        "invested": 82315
+      }
+    ]
+  },
+  {
+    "date": "2019-06-01",
+    "income": 1491608,
+    "investInTreePlanting": 713579,
+    "treePlanted": 1936613
+  },
+  {
+    "date": "2019-05-01",
+    "income": 1567995,
+    "investInTreePlanting": 815378,
+    "treePlanted": 408056
+  },
+  {
+    "date": "2019-04-01",
+    "income": 1191534,
+    "investInTreePlanting": 590275,
+    "treePlanted": 3474205
+  },
+  {
+    "date": "2019-03-01",
+    "income": 1755823,
+    "investInTreePlanting": 855323,
+    "treePlanted": 490137
+  },
+  {
+    "date": "2019-02-01",
+    "income": 986525,
+    "investInTreePlanting": 440038,
+    "treePlanted": 1594807
+  },
+  {
+    "date": "2019-01-01",
+    "income": 1044925,
+    "investInTreePlanting": 438846,
+    "treePlanted": 2047139
+  },
+
+  {
+    "date": "2018-12-01",
+    "income": 1131918,
+    "investInTreePlanting": 533080,
+    "treePlanted": 2247357
+  },
+  {
+    "date": "2018-11-01",
+    "income": 941239,
+    "investInTreePlanting": 440925,
+    "treePlanted": 1111426
+  },
+  {
+    "date": "2018-10-01",
+    "income": 688927,
+    "investInTreePlanting": 215012,
+    "treePlanted": 1226638
+  },
+  {
+    "date": "2018-09-01",
+    "income": 666163,
+    "investInTreePlanting": 301903,
+    "treePlanted": 2501497
+  },
+  {
+    "date": "2018-08-01",
+    "income": 676747,
+    "investInTreePlanting": 293421,
+    "treePlanted": 1065225
+  },
+  {
+    "date": "2018-07-01",
+    "income": 698901,
+    "investInTreePlanting": 319127,
+    "treePlanted": 2201241
+  },
+  {
+    "date": "2018-06-01",
+    "income": 679961,
+    "investInTreePlanting": 264005,
+    "treePlanted": 4850375
+  },
+  {
+    "date": "2018-05-01",
+    "income": 658546,
+    "investInTreePlanting": 300902,
+    "treePlanted": 2332407
+  },
+  {
+    "date": "2018-04-01",
+    "income": 722269,
+    "investInTreePlanting": 341582,
+    "treePlanted": 1757131
+  },
+  {
+    "date": "2018-04-01",
+    "income": 722269,
+    "investInTreePlanting": 341582,
+    "treePlanted": 1757131
+  },
+  {
+    "date": "2018-03-01",
+    "income": 656185,
+    "investInTreePlanting": 302501,
+    "treePlanted": 2083682
+  },
+  {
+    "date": "2018-02-01",
+    "income": 793636,
+    "investInTreePlanting": 411269,
+    "treePlanted": 3706716
+  },
+  {
+    "date": "2018-01-01",
+    "income": 734653,
+    "investInTreePlanting": 421370,
+    "treePlanted": 1873037
+  },
+  {
+    "date": "2017-12-01",
+    "income": 851734,
+    "investInTreePlanting": 470215,
+    "treePlanted": 1871542
+  },
+  {
+    "date": "2017-11-01",
+    "income": 767947,
+    "investInTreePlanting": 377013,
+    "treePlanted": 2508805
+  },
+  {
+    "date": "2017-10-01",
+    "income": 724348,
+    "investInTreePlanting": 303949,
+    "treePlanted": 2508805
+  },
+  {
+    "date": "2017-09-01",
+    "income": 713843,
+    "investInTreePlanting": 299621,
+    "treePlanted": 2450511
+  },
+  {
+    "date": "2017-08-01",
+    "income": 781513,
+    "investInTreePlanting": 388018,
+    "treePlanted": 1375591
+  },
+  {
+    "date": "2017-07-01",
+    "income": 778168,
+    "investInTreePlanting": 449815,
+    "treePlanted": 1765067
+  },
+  {
+    "date": "2017-06-01",
+    "income": 797844,
+    "investInTreePlanting": 446075,
+    "treePlanted": 929618
+  },
+  {
+    "date": "2017-05-01",
+    "income": 749071,
+    "investInTreePlanting": 441197,
+    "treePlanted": 1874712
+  },
+  {
+    "date": "2017-04-01",
+    "income": 722269,
+    "investInTreePlanting": 341582,
+    "treePlanted": 1757131
+  },
+  {
+    "date": "2017-03-01",
+    "income": 604715,
+    "investInTreePlanting": 270551,
+    "treePlanted": 993514
+  },
+  {
+    "date": "2017-02-01",
+    "income": 349158,
+    "investInTreePlanting": 145000,
+    "treePlanted": 690561
+  },
+  {
+    "date": "2017-01-01",
+    "income": 300394,
+    "investInTreePlanting": 130000,
+    "treePlanted": 989146
+  },
+  {
+    "date": "2016-12-01",
+    "income": 276935,
+    "investInTreePlanting": 137000,
+    "treePlanted": 341379
+  },
+  {
+    "date": "2016-11-01",
+    "income": 242833,
+    "investInTreePlanting": 140800,
+    "treePlanted": 372849
+  },
+  {
+    "date": "2016-10-01",
+    "income": 202371,
+    "investInTreePlanting": 102900,
+    "treePlanted": 762814
+  },
+  {
+    "date": "2016-09-01",
+    "income": 182949,
+    "investInTreePlanting": 84991,
+    "treePlanted": 355281
+  },
+  {
+    "date": "2016-08-01",
+    "income": 154056,
+    "investInTreePlanting": 65000,
+    "treePlanted": 232142
+  },
+  {
+    "date": "2016-07-01",
+    "income": 154712,
+    "investInTreePlanting": 74000,
+    "treePlanted": 214285
+  },
+  {
+    "date": "2016-06-01",
+    "income": 143225,
+    "investInTreePlanting": 54000,
+    "treePlanted": 192857
+  },
+  {
+    "date": "2016-05-01",
+    "income": 115164,
+    "investInTreePlanting": 50150,
+    "treePlanted": 179107
+  },
+  {
+    "date": "2016-04-01",
+    "income": 138040,
+    "investInTreePlanting": 68000,
+    "treePlanted": 178571
+  },
+  {
+    "date": "2016-03-01",
+    "income": 156472,
+    "investInTreePlanting": 83750,
+    "treePlanted": 299107
+  },
+  {
+    "date": "2016-02-01",
+    "income": 131975,
+    "investInTreePlanting": 65500,
+    "treePlanted": 232143
+  },
+  {
+    "date": "2016-01-01",
+    "income": 138145,
+    "investInTreePlanting": 72350,
+    "treePlanted": 258393
+  },
+  {
+    "date": "2015-12-01",
+    "income": 133463,
+    "investInTreePlanting": 62450,
+    "treePlanted": 223036
+  },
+  {
+    "date": "2015-11-01",
+    "income": 123948,
+    "investInTreePlanting": 47450,
+    "treePlanted": 169464
+  },
+  {
+    "date": "2015-10-01",
+    "income": 132534,
+    "investInTreePlanting": 63700,
+    "treePlanted": 227500
+  },
+  {
+    "date": "2015-09-01",
+    "income": 120250,
+    "investInTreePlanting": 56500,
+    "treePlanted": 201786
+  },
+  {
+    "date": "2015-08-01",
+    "income": 102303,
+    "investInTreePlanting": 47250,
+    "treePlanted": 168750
+  },
+  {
+    "date": "2015-07-01",
+    "income": 106999,
+    "investInTreePlanting": 44750,
+    "treePlanted": 159821
+  },
+  {
+    "date": "2015-06-01",
+    "income": 97418,
+    "investInTreePlanting": 32220,
+    "treePlanted": 115071
+  },
+  {
+    "date": "2015-05-01",
+    "income": 115164,
+    "investInTreePlanting": 50150,
+    "treePlanted": 179107
+  },
+  {
+    "date": "2015-04-01",
+    "income": 101573,
+    "investInTreePlanting": 50000,
+    "treePlanted": 178571
+  },
+  {
+    "date": "2015-03-01",
+    "income": 125528,
+    "investInTreePlanting": 72000,
+    "treePlanted": 257143
+  },
+  {
+    "date": "2015-02-01",
+    "income": 121829,
+    "investInTreePlanting": 67000,
+    "treePlanted": 0
+  },
+  {
+    "date": "2015-01-01",
+    "income": 109047,
+    "investInTreePlanting": 62500,
+    "treePlanted": 223214
+  },
+  {
+    "date": "2014-12-01",
+    "income": 0,
+    "investInTreePlanting": 0,
+    "treePlanted": 142857
+  },
+  {
+    "date": "2014-11-01",
+    "income": 0,
+    "investInTreePlanting": 0,
+    "treePlanted": 142857
+  },
+  {
+    "date": "2014-10-01",
+    "income": 0,
+    "investInTreePlanting": 0,
+    "treePlanted": 221429
+  },
+  {
+    "date": "2014-09-01",
+    "income": 0,
+    "investInTreePlanting": 0,
+    "treePlanted": 55030
+  },
+  {
+    "date": "2014-08-01",
+    "income": 0,
+    "investInTreePlanting": 0,
+    "treePlanted": 64832
+  },
+  {
+    "date": "2014-07-01",
+    "income": 0,
+    "investInTreePlanting": 0,
+    "treePlanted": 77992
+  },
+  {
+    "date": "2014-06-01",
+    "income": 0,
+    "investInTreePlanting": 0,
+    "treePlanted": 60952
+  },
+  {
+    "date": "2014-05-01",
+    "income": 0,
+    "investInTreePlanting": 0,
+    "treePlanted": 81582
+  },
+  {
+    "date": "2014-04-01",
+    "income": 0,
+    "investInTreePlanting": 0,
+    "treePlanted": 101071
+  },
+  {
+    "date": "2014-03-01",
+    "income": 0,
+    "investInTreePlanting": 0,
+    "treePlanted": 80058
+  },
+  {
+    "date": "2014-02-01",
+    "income": 0,
+    "investInTreePlanting": 0,
+    "treePlanted": 54866
+  },
+  {
+    "date": "2014-01-01",
+    "income": 0,
+    "investInTreePlanting": 0,
+    "treePlanted": 33764
+  }
+]

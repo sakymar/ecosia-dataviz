@@ -15,7 +15,10 @@ import Card from "./components/Card";
 import styled from "styled-components";
 import Kpi from "./components/Kpi";
 import BarChartCard from "./components/BarChartCard";
+import test from "./test2.svg";
 import Map from "./components/Map";
+import Timeline from "./components/Timeline";
+import Footer from "./components/Footer";
 
 const StyledContainer = styled.div`
   display: grid;
@@ -24,15 +27,14 @@ const StyledContainer = styled.div`
 
   .containerKpi {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
   }
 `;
 
-function getProgression(data) {
+function getProgression(data, property) {
   return parseInt(
-    (data[data.length - 1].treePlanted / data[data.length - 13].treePlanted) *
-      100,
+    (data[data.length - 1][property] / data[data.length - 13][property]) * 100,
     10
   );
 }
@@ -46,6 +48,7 @@ function App() {
   ];
 
   let cumulatedTotal = 0;
+  let cumulatedMoney = 0;
   const cumulatedData = [...data]
     .sort(
       (a, b) =>
@@ -53,16 +56,33 @@ function App() {
     )
     .map((item, index) => {
       cumulatedTotal += item.treePlanted;
+      cumulatedMoney += item.income;
       return {
         ...item,
-        treePlanted: cumulatedTotal
+        treePlanted: cumulatedTotal,
+        income: cumulatedMoney
       };
     });
 
-  const progressionTrees = getProgression(cumulatedData);
+  const progressionTrees = getProgression(cumulatedData, "treePlanted");
+  const progressionIncome = getProgression(cumulatedData, "income");
 
   return (
-    <div className="App">
+    <div
+      className="App"
+      style={{ position: "relative", zIndex: 2, paddingBottom: 5 }}
+    >
+      <img
+        src={test}
+        style={{
+          opacity: 0.7,
+          width: 1500,
+          position: "absolute",
+          right: -500,
+          top: -500,
+          zIndex: 0
+        }}
+      />
       <h1>ECOSIA DATAVIZ</h1>
       <h3>
         Hey, I'm Antoine. I gost frustrated to not see graphs on Ecosia's blog
@@ -71,22 +91,28 @@ function App() {
       <StyledContainer>
         <div className="containerKpi">
           <Kpi
-            label="Progression des revenues sur les 12 derniers mois"
+            label="Progression d'arbres plantés sur les 12 derniers mois"
             value={`${progressionTrees} %`}
           />
           <Kpi
             label="Progression des revenues sur les 12 derniers mois"
-            value={`${progressionTrees} %`}
+            value={`${progressionIncome} %`}
           />
           <Kpi
-            label="Progression des revenues sur les 12 derniers mois"
-            value={`${progressionTrees} %`}
+            label="Nombre total plantés"
+            value={`${cumulatedData[cumulatedData.length - 1].treePlanted}`}
           />
           <Kpi
-            label="Progression des revenues sur les 12 derniers mois"
-            value={`${progressionTrees} %`}
+            label="Equivalence en surface"
+            value={`${Number(
+              cumulatedData[cumulatedData.length - 1].treePlanted / 500 / 100
+            ).toFixed(0)}Km²`}
+            subValue={`${Number(
+              cumulatedData[cumulatedData.length - 1].treePlanted / 500 / 10000
+            ).toFixed(0)}x Paris size`}
           />
         </div>
+        <div></div>
         <BarChartCard
           title="tree planted each month"
           data={data
@@ -129,8 +155,24 @@ function App() {
                 moment(b.date).format("YYYYMMDD")
             )}
         />
+        <BarChartCard
+          title="revenues by month"
+          data={cumulatedData
+            .map(item => ({
+              ...item,
+              value: item.income,
+              name: moment(item.date).format("MM/YY")
+            }))
+            .sort(
+              (a, b) =>
+                moment(a.date).format("YYYYMMDD") -
+                moment(b.date).format("YYYYMMDD")
+            )}
+        />
       </StyledContainer>
-      {/* <Map /> */}
+      <Map />
+      <Timeline dates={data.map(item => item.date)} />
+      <Footer />
     </div>
   );
 }

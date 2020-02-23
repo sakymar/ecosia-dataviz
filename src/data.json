@@ -1,5 +1,113 @@
 [
   {
+    "date": "2019-12-01",
+    "income": 2497060,
+    "investInTreePlanting": 1281721,
+    "treePlanted": 9730223,
+    "places": [
+      {
+        "name": "Madagascar",
+        "invested": 284178
+      },
+      {
+        "name": "Nicaragua",
+        "invested": 2408
+      },
+      {
+        "name": "Colombia",
+        "invested": 108329
+      },
+      {
+        "name": "Ethiopia",
+        "invested": 48710
+      },
+      {
+        "name": "Indonesia",
+        "invested": 16803
+      },
+      {
+        "name": "Uganda",
+        "invested": 42192
+      },
+      {
+        "name": "Morocco",
+        "invested": 177006
+      },
+      {
+        "name": "Peru",
+        "invested": 50000
+      },
+      {
+        "name": "Kenya",
+        "invested": 21198
+      },
+      {
+        "name": "Brazil",
+        "invested": 73621
+      },
+      {
+        "name": "India",
+        "invested": 18406
+      },
+      {
+        "name": "Republic of Cote d'Ivoire",
+        "invested": 108870
+      }
+    ]
+  },
+  {
+    "date": "2019-11-01",
+    "income": 2075223,
+    "investInTreePlanting": 945983,
+    "treePlanted": 6737131,
+    "places": [
+      {
+        "name": "Madagascar",
+        "invested": 109800
+      },
+      {
+        "name": "Burkina Faso",
+        "invested": 702894
+      },
+      {
+        "name": "Ethiopia",
+        "invested": 136536
+      },
+      {
+        "name": "Brazil",
+        "invested": 68497
+      },
+      {
+        "name": "Spain",
+        "invested": 21210
+      },
+      {
+        "name": "Malawi",
+        "invested": 20473
+      },
+      {
+        "name": "Tanzania",
+        "invested": 19905
+      }
+    ]
+  },
+  {
+    "date": "2019-10-01",
+    "income": 2203147,
+    "investInTreePlanting": 992325,
+    "treePlanted": 485348,
+    "places": [
+      {
+        "name": "Haïtï",
+        "invested": 22325
+      },
+      {
+        "name": "Burkina Faso",
+        "invested": 100000
+      }
+    ]
+  },
+  {
     "date": "2019-09-01",
     "income": 2039303,
     "investInTreePlanting": 947388,
@@ -83,104 +191,374 @@
     "date": "2019-06-01",
     "income": 1491608,
     "investInTreePlanting": 713579,
-    "treePlanted": 1936613
+    "treePlanted": 1936613,
+    "places": [
+      {
+        "name": "Colombia",
+        "invested": 281282
+      },
+      {
+        "name": "Burkina Faso",
+        "invested": 84248
+      },
+      {
+        "name": "Ethiopia",
+        "invested": 128049
+      }
+    ]
   },
   {
     "date": "2019-05-01",
     "income": 1567995,
     "investInTreePlanting": 815378,
-    "treePlanted": 408056
+    "treePlanted": 408056,
+    "places": [
+      {
+        "name": "Kenya",
+        "invested": 38220
+      },
+      {
+        "name": "Burkina Faso",
+        "invested": 127816
+      },
+      {
+        "name": "Madagascar",
+        "invested": 152531
+      },
+      {
+        "name": "Brazil",
+        "invested": 92487
+      }
+    ]
   },
   {
     "date": "2019-04-01",
     "income": 1191534,
     "investInTreePlanting": 590275,
-    "treePlanted": 3474205
+    "treePlanted": 3474205,
+    "places": [
+      {
+        "name": "Tanzania",
+        "invested": 23854
+      },
+      {
+        "name": "Burkina Faso",
+        "invested": 228079
+      },
+      {
+        "name": "Madagascar",
+        "invested": 104045
+      },
+      {
+        "name": "Senegal",
+        "invested": 14955
+      },
+      {
+        "name": "Peru",
+        "invested": 26109
+      },
+      {
+        "name": "Ethiopia",
+        "invested": 117233
+      }
+    ]
   },
   {
     "date": "2019-03-01",
     "income": 1755823,
     "investInTreePlanting": 855323,
-    "treePlanted": 490137
+    "treePlanted": 490137,
+    "places": [
+      {
+        "name": "Ghana",
+        "invested": 42879
+      },
+      {
+        "name": "Burkina Faso",
+        "invested": 122159
+      }
+    ]
   },
   {
     "date": "2019-02-01",
     "income": 986525,
     "investInTreePlanting": 440038,
-    "treePlanted": 1594807
+    "treePlanted": 1594807,
+    "places": [
+      {
+        "name": "Spain",
+        "invested": 3000
+      },
+      {
+        "name": "Burkina Faso",
+        "invested": 122159
+      },
+      {
+        "name": "Madagascar",
+        "invested": 69808
+      }
+    ]
   },
   {
     "date": "2019-01-01",
     "income": 1044925,
     "investInTreePlanting": 438846,
-    "treePlanted": 2047139
+    "treePlanted": 2047139,
+    "places": [
+      {
+        "name": "Burkina Faso",
+        "invested": 249036
+      },
+      {
+        "name": "Madagascar",
+        "invested": 69810
+      }
+    ]
   },
 
   {
     "date": "2018-12-01",
     "income": 1131918,
     "investInTreePlanting": 533080,
-    "treePlanted": 2247357
+    "treePlanted": 2247357,
+    "places": [
+      {
+        "name": "Colombia",
+        "invested": 220305
+      },
+      {
+        "name": "Indonesia",
+        "invested": 61730
+      },
+      {
+        "name": "Madagascar",
+        "invested": 51641
+      },
+      {
+        "name": "Ethiopia",
+        "invested": 38490
+      }
+    ]
   },
   {
     "date": "2018-11-01",
     "income": 941239,
     "investInTreePlanting": 440925,
-    "treePlanted": 1111426
+    "treePlanted": 1111426,
+    "places": [
+      {
+        "name": "Madagascar",
+        "invested": 51654
+      },
+      {
+        "name": "Peru",
+        "invested": 71271
+      }
+    ]
   },
   {
     "date": "2018-10-01",
     "income": 688927,
     "investInTreePlanting": 215012,
-    "treePlanted": 1226638
+    "treePlanted": 1226638,
+    "places": [
+      {
+        "name": "Burkina Faso",
+        "invested": 209815
+      },
+      {
+        "name": "Indonesia",
+        "invested": 6550
+      },
+      {
+        "name": "Madagascar",
+        "invested": 51647
+      }
+    ]
   },
   {
     "date": "2018-09-01",
     "income": 666163,
     "investInTreePlanting": 301903,
-    "treePlanted": 2501497
+    "treePlanted": 2501497,
+    "places": [
+      {
+        "name": "Ghana",
+        "invested": 108119
+      },
+      {
+        "name": "Ethiopia",
+        "invested": 309880
+      },
+      {
+        "name": "Senegal",
+        "invested": 17283
+      },
+      {
+        "name": "Madagascar",
+        "invested": 51621
+      }
+    ]
   },
   {
     "date": "2018-08-01",
     "income": 676747,
     "investInTreePlanting": 293421,
-    "treePlanted": 1065225
+    "treePlanted": 1065225,
+    "places": [
+      {
+        "name": "Burkina Faso",
+        "invested": 128038
+      },
+      {
+        "name": "Uganda",
+        "invested": 13286
+      },
+      {
+        "name": "Nicaragua",
+        "invested": 12351
+      },
+      {
+        "name": "Colombia",
+        "invested": 177711
+      },
+      {
+        "name": "Kenya",
+        "invested": 76438
+      }
+    ]
   },
   {
     "date": "2018-07-01",
     "income": 698901,
     "investInTreePlanting": 319127,
-    "treePlanted": 2201241
+    "treePlanted": 2201241,
+    "places": [
+      {
+        "name": "Tanzania",
+        "invested": 128038
+      },
+      {
+        "name": "Nicaragua",
+        "invested": 11880
+      },
+      {
+        "name": "Madagascar",
+        "invested": 51621
+      },
+      {
+        "name": "Morocco",
+        "invested": 56259
+      },
+      {
+        "name": "Haïtï",
+        "invested": 27544
+      }
+    ]
   },
   {
     "date": "2018-06-01",
     "income": 679961,
     "investInTreePlanting": 264005,
-    "treePlanted": 4850375
+    "treePlanted": 4850375,
+    "places": [
+      {
+        "name": "Burkina Faso",
+        "invested": 130154
+      },
+      {
+        "name": "Ghana",
+        "invested": 74547
+      },
+      {
+        "name": "Madagascar",
+        "invested": 58554
+      },
+      {
+        "name": "Brazil",
+        "invested": 133750
+      }
+    ]
   },
   {
     "date": "2018-05-01",
     "income": 658546,
     "investInTreePlanting": 300902,
-    "treePlanted": 2332407
+    "treePlanted": 2332407,
+    "places": [
+      {
+        "name": "Madagascar",
+        "invested": 29435
+      },
+      {
+        "name": "Brazil",
+        "invested": 59600
+      },
+      {
+        "name": "Ethiopia",
+        "invested": 148579
+      },
+      {
+        "name": "Tanzania",
+        "invested": 121288
+      }
+    ]
   },
   {
     "date": "2018-04-01",
     "income": 722269,
     "investInTreePlanting": 341582,
-    "treePlanted": 1757131
-  },
-  {
-    "date": "2018-04-01",
-    "income": 722269,
-    "investInTreePlanting": 341582,
-    "treePlanted": 1757131
+    "treePlanted": 1757131,
+    "places": [
+      {
+        "name": "Burkina Faso",
+        "invested": 99357
+      },
+      {
+        "name": "Indonesia",
+        "invested": 33289
+      },
+      {
+        "name": "Brazil",
+        "invested": 43571
+      },
+      {
+        "name": "Madagascar",
+        "invested": 41150
+      },
+      {
+        "name": "Kenya",
+        "invested": 121222
+      }
+    ]
   },
   {
     "date": "2018-03-01",
     "income": 656185,
     "investInTreePlanting": 302501,
-    "treePlanted": 2083682
+    "treePlanted": 2083682,
+    "places": [
+      {
+        "name": "Tanzania",
+        "invested": 132308
+      },
+      {
+        "name": "Indonesia",
+        "invested": 24966
+      },
+      {
+        "name": "Brazil",
+        "invested": 64565
+      },
+      {
+        "name": "Madagascar",
+        "invested": 12999
+      },
+      {
+        "name": "Spain",
+        "invested": 4500
+      }
+    ]
   },
   {
     "date": "2018-02-01",

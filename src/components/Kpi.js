@@ -20,12 +20,20 @@ const StyledContainer = styled.div`
     font-weight: bold;
     margin-top: 0px;
   }
+
+  .subValueKpi {
+    margin: 0;
+    margin-top: -30px;
+    font-weight: normal;
+    font-size: calc(12px + 0.8vw);
+  }
 `;
 
-const Kpi = ({ label, value }) => (
+const Kpi = ({ label, value, subValue }) => (
   <StyledContainer>
     <p className="labelKpi">{label}</p>
     <h3 className="valueKpi">{value}</h3>
+    <h4 className="subValueKpi">{subValue}</h4>
   </StyledContainer>
 );
 

@@ -5,15 +5,20 @@ import { StaticMap } from "react-map-gl";
 import { AmbientLight, PointLight, LightingEffect } from "@deck.gl/core";
 import { HexagonLayer } from "@deck.gl/aggregation-layers";
 import DeckGL from "@deck.gl/react";
+import dataEcosia from "../data.json";
+import countries from "../countries.json";
+import test from "../test.json";
 
-const StyledContainer = styled.div``;
+const StyledContainer = styled.div`
+  height: 500px;
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 40px;
+  position: relative;
+`;
 
 const MAPBOX_TOKEN =
   "pk.eyJ1Ijoic2FreW1hciIsImEiOiJjazJ6eTl6cDQwMmZ2M25yY2R4N29rMmQ4In0.WRByp2Gxeb2Ofd2LgsBATg"; // eslint-disable-line
-
-// Source data CSV
-const DATA_URL =
-  "https://raw.githubusercontent.com/uber-common/deck.gl-data/master/examples/3d-heatmap/heatmap-data.csv"; // eslint-disable-line
 
 const ambientLight = new AmbientLight({
   color: [255, 255, 255],
@@ -39,13 +44,13 @@ const lightingEffect = new LightingEffect({
 });
 
 const INITIAL_VIEW_STATE = {
-  longitude: -1.4157267858730052,
-  latitude: 52.232395363869415,
-  zoom: 6.6,
-  minZoom: 2,
-  maxZoom: 8,
-  pitch: 40.5,
-  bearing: -27.396674584323023
+  longitude: 0,
+  latitude: 0,
+  zoom: 2,
+  minZoom: 1,
+  maxZoom: 4,
+  pitch: 30,
+  bearing: 0
 };
 
 const colorRange = [
@@ -57,7 +62,8 @@ const colorRange = [
   [209, 55, 78]
 ];
 
-const elevationScale = { min: 1, max: 50 };
+const DATA_URL =
+  "https://raw.githubusercontent.com/uber-common/deck.gl-data/master/examples/3d-heatmap/heatmap-data.csv"; // eslint-disable-line
 
 class Map extends Component {
   static get defaultColorRange() {
@@ -67,9 +73,34 @@ class Map extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      elevationScale: elevationScale.min,
       data: []
     };
+  }
+
+  formatData() {
+    const formatedData = {};
+    dataEcosia.forEach(entry => {
+      if (entry.places) {
+        entry.places.forEach(place => {
+          if (!formatedData[place.name]) {
+            formatedData[place.name] = { ...place };
+            const dataCountry = countries.find(
+              item => item.name === place.name
+            );
+            if (dataCountry) {
+              formatedData[place.name].lat = Number(dataCountry.Latitude);
+              formatedData[place.name].long = Number(dataCountry.Longitude);
+            } else {
+              console.log(place.name);
+            }
+          } else {
+            formatedData[place.name].invested =
+              formatedData[place.name].invested + place.invested;
+          }
+        });
+      }
+    });
+    return Object.values(formatedData);
   }
 
   async componentWillMount() {
@@ -83,26 +114,34 @@ class Map extends Component {
   }
 
   _renderLayers() {
-    const { radius = 1000, upperPercentile = 100, coverage = 1 } = this.props;
+    const data = this.formatData();
+    const testData = [];
+    for (let place of data) {
+      for (let i = 0; i < place.invested / 100; i++) {
+        if (place.long) testData.push([place.long, place.lat]);
+      }
+    }
+    console.log(testData);
+    console.log(data);
+    console.log(this.state.data);
 
-    const { data } = this.state;
+    const megaTest = this.state.data.map((item, index) =>
+      testData[index] ? testData[index] : item
+    );
 
     return [
       new HexagonLayer({
         id: "heatmap",
         colorRange,
-        coverage,
-        data,
+        data: testData,
         elevationRange: [0, 3000],
-        elevationScale: data && data.length ? 50 : 0,
+        elevationScale: testData && testData.length ? 1500 : 0,
         extruded: true,
         getPosition: d => d,
         onHover: this.props.onHover,
         opacity: 1,
         pickable: Boolean(this.props.onHover),
-        radius,
-        upperPercentile,
-
+        radius: 100000,
         transitions: {
           elevationScale: 3000
         }
@@ -111,7 +150,7 @@ class Map extends Component {
   }
 
   render() {
-    const { mapStyle = "mapbox://styles/mapbox/dark-v9" } = this.props;
+    const { mapStyle = "mapbox://styles/mapbox/light-v9" } = this.props;
     return (
       <StyledContainer>
         <DeckGL

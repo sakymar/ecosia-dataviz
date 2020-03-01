@@ -7,13 +7,14 @@ import { HexagonLayer } from "@deck.gl/aggregation-layers";
 import DeckGL from "@deck.gl/react";
 import dataEcosia from "../data.json";
 import countries from "../countries.json";
-import test from "../test.json";
+import get from "lodash/get";
+import Timeline from "./Timeline.js";
 
 const StyledContainer = styled.div`
   height: 500px;
-  width: 90%;
-  margin-left: 5%;
-  margin-top: 40px;
+  width: calc(100% + 80px);
+  margin-left: -40px;
+  margin-top: 80px;
   position: relative;
 `;
 
@@ -46,24 +47,18 @@ const lightingEffect = new LightingEffect({
 const INITIAL_VIEW_STATE = {
   longitude: 0,
   latitude: 0,
-  zoom: 2,
+  zoom: 1.8,
   minZoom: 1,
-  maxZoom: 4,
-  pitch: 30,
-  bearing: 0
+  maxZoom: 1.6,
+  pitch: 30
 };
 
 const colorRange = [
-  [1, 152, 189],
-  [73, 227, 206],
-  [216, 254, 181],
-  [254, 237, 177],
-  [254, 173, 84],
-  [209, 55, 78]
+  [54, 172, 184],
+  [0, 200, 171],
+  [211, 218, 48],
+  [255, 121, 80]
 ];
-
-const DATA_URL =
-  "https://raw.githubusercontent.com/uber-common/deck.gl-data/master/examples/3d-heatmap/heatmap-data.csv"; // eslint-disable-line
 
 class Map extends Component {
   static get defaultColorRange() {
@@ -79,7 +74,16 @@ class Map extends Component {
 
   formatData() {
     const formatedData = {};
-    dataEcosia.forEach(entry => {
+
+    const { currentDate } = this.props;
+    let data = [...dataEcosia];
+    console.log(data);
+    if (currentDate && currentDate.date) {
+      console.log(currentDate);
+      data = data.filter(item => item.date === currentDate.date);
+    }
+    console.log("AFTER", data);
+    data.forEach(entry => {
       if (entry.places) {
         entry.places.forEach(place => {
           if (!formatedData[place.name]) {
@@ -103,31 +107,16 @@ class Map extends Component {
     return Object.values(formatedData);
   }
 
-  async componentWillMount() {
-    await require("d3-request").csv(DATA_URL, (error, response) => {
-      console.log("RESPONSE", response);
-      if (!error) {
-        const data = response.map(d => [Number(d.lng), Number(d.lat)]);
-        this.setState({ data });
-      }
-    });
-  }
-
   _renderLayers() {
     const data = this.formatData();
+    console.log("DATA", data);
     const testData = [];
     for (let place of data) {
-      for (let i = 0; i < place.invested / 100; i++) {
-        if (place.long) testData.push([place.long, place.lat]);
+      for (let i = 0; i < place.invested / 10000; i++) {
+        if (place.long)
+          testData.push({ ...place, position: [place.long, place.lat] });
       }
     }
-    console.log(testData);
-    console.log(data);
-    console.log(this.state.data);
-
-    const megaTest = this.state.data.map((item, index) =>
-      testData[index] ? testData[index] : item
-    );
 
     return [
       new HexagonLayer({
@@ -137,11 +126,16 @@ class Map extends Component {
         elevationRange: [0, 3000],
         elevationScale: testData && testData.length ? 1500 : 0,
         extruded: true,
-        getPosition: d => d,
-        onHover: this.props.onHover,
+        getPosition: d => d.position,
         opacity: 1,
-        pickable: Boolean(this.props.onHover),
+        pickable: true,
         radius: 100000,
+        onHover: info =>
+          this.setState({
+            hoveredObject: info.object,
+            pointerX: info.x,
+            pointerY: info.y
+          }),
         transitions: {
           elevationScale: 3000
         }
@@ -149,22 +143,73 @@ class Map extends Component {
     ];
   }
 
+  _renderTooltip() {
+    const { hoveredObject, pointerX, pointerY } = this.state || {};
+
+    return (
+      hoveredObject && (
+        <div
+          style={{
+            position: "absolute",
+            zIndex: 999,
+            pointerEvents: "none",
+            left: pointerX,
+            top: pointerY,
+            backgroundColor: "white",
+            padding: "10px 20px",
+            borderRadius: 8,
+            fontFamily: "Open Sans"
+          }}
+        >
+          <p
+            style={{
+              textTransform: "uppercase",
+              fontFamily: "Raleway",
+              letterSpacing: 1
+            }}
+          >
+            {get(hoveredObject, "points[0].name")}
+          </p>
+          <p>
+            {get(hoveredObject, "points[0].invested", 0).toLocaleString(
+              "fr-FR",
+              {
+                currency: "EUR",
+                style: "currency",
+                maximumFractionDigits: 0,
+                minimumFractionDigits: 0
+              }
+            )}
+          </p>
+        </div>
+      )
+    );
+  }
+
   render() {
-    const { mapStyle = "mapbox://styles/mapbox/light-v9" } = this.props;
+    const {
+      mapStyle = "mapbox://styles/mapbox/outdoors-v11",
+      dates
+    } = this.props;
     return (
       <StyledContainer>
         <DeckGL
           layers={this._renderLayers()}
           effects={[lightingEffect]}
           initialViewState={INITIAL_VIEW_STATE}
-          controller={true}
+          controller={{ scrollZoom: false }}
+          scrollZoom={false}
         >
           <StaticMap
+            scrollZoom={false}
             reuseMaps
+            captureScroll={false}
             mapStyle={mapStyle}
             preventStyleDiffing={true}
             mapboxApiAccessToken={MAPBOX_TOKEN}
           />
+
+          {this._renderTooltip()}
         </DeckGL>
       </StyledContainer>
     );
